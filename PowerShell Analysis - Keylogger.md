@@ -25,7 +25,7 @@
   `Get-FileHash .\HDWallpaperEngine.ps1`
 
   ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/7fddd9fd-5174-4168-8a79-d52d03cc23b0)
-- Make sure that you are in the directory where the file is located.
+  > Make sure that you are in the directory where the file is located.
 
   **Answer: `E0B7A2AD2320AC32C262AEB6FE2C6C0D75449C6E34D0D18A531157C827B9754E`**
 
