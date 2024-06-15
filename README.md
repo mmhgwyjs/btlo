@@ -6,6 +6,7 @@
 ### Incident Response
 
 ### Reverse Engineering
+- <a href="https://github.com/mmhgwyjs/btlo/blob/main/PowerShell%20Analysis%20-%20Keylogger.md">PowerShell Analysis - Keylogger</a>
 
 ### Security Operations
 
