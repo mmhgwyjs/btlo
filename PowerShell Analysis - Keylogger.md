@@ -107,7 +107,7 @@
 
   ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/35f344ab-5a86-4bc3-aa14-ca430abdee8a)
 
-  ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/58e45d76-40bd-46ac-bece-eb2b23691d2c)
+  ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/21fb40b5-02a0-42c5-9ac3-f2cd9d561197)
 
   > I tried multiple times and noticed that it stops logging after a while. I'm not sure if it will start logging again.
 
