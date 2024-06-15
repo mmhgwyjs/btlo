@@ -1,4 +1,4 @@
-## <a href="https://blueteamlabs.online/home/challenge/powershell-analysis-keylogger-9f4ab9a11c">PowerShell Analysis - Keylogger</a>
+# <a href="https://blueteamlabs.online/home/challenge/powershell-analysis-keylogger-9f4ab9a11c">PowerShell Analysis - Keylogger</a>
 
 **Platform:** Blue Team Labs Online (BTLO)
 
@@ -18,7 +18,7 @@
 
 ---
 
-**Questions and Answers:**
+## **Questions and Answers:**
 
 ***1. What is the SHA256 hash value for the PowerShell script file?***
 - Use Powershell with the following command:
@@ -55,22 +55,64 @@
 
 ***5. What DLL is imported to help record keystrokes?***
 
-- a
+- These functions are imported from `user32.dll`:
+  
+  `GetAsyncKeyState` `GetKeyboardState` `MapVirtualKey` `ToUnicode`
   
   ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/52114301-4ff5-49e8-96b4-1971345e913e)
 
   **Answer: `user32.dll`**
 
-  > Note:
+  > I am not knowledgeable yet in creating a script for a keylogger, but this may be helpful for reference:
+  >
+  > [How to make a keylogger in PowerShell?](https://www.tarlogic.com/blog/how-to-make-keylogger-in-powershell/)
 
 ***6. What directory is the generated txt file put in?***
 
- - a
+- It will be under %temp%.
 
-   ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/aefb7760-9fa8-4c6c-805d-3c35119efb7d)
+  ![Screenshot 2024-06-16 011446](https://github.com/mmhgwyjs/btlo/assets/159692853/471d14a6-1ab9-4f7f-bd28-6c8aeec78900)
 
+   
    **Answer: `temp`**
 
 ---
 
-**Additional**
+## **Additional Analysis/Artifacts**
+
+### Static Analysis
+
+**VirusTotal:** [e0b7a2ad2320ac32c262aeb6fe2c6c0d75449c6e34d0d18a531157c827b9754e](https://www.virustotal.com/gui/file/e0b7a2ad2320ac32c262aeb6fe2c6c0d75449c6e34d0d18a531157c827b9754e/relations)
+
+### Dynamic Analysis
+
+***1. I ran the .ps1 script as administrator while process explorer and inetsim were running.***
+
+  ![Screenshot 2024-06-16 011446](https://github.com/mmhgwyjs/btlo/assets/159692853/8123b480-1f07-40bd-ab3f-2af31d77fb1e)
+
+
+***2. To test the keylogger, I typed in the browser, Windows Explorer, Command Prompt (cmd), Notepad, and Notepad++.***
+
+***3. To stop the script, type `CTRL + C`.***
+
+- **Process Monitor:**
+  
+  ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/27aefed2-d27c-4256-8d2e-143ac22bb78a)
+
+- **Created file:**
+
+  ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/73bc9f62-5a20-4aea-9b0c-b59dd3da5c06)
+
+- **File Contents:**
+
+  ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/35f344ab-5a86-4bc3-aa14-ca430abdee8a)
+
+  ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/58e45d76-40bd-46ac-bece-eb2b23691d2c)
+
+  > I tried multiple times and noticed that it stops logging after a while. I'm not sure if it will start logging again.
+
+- **Inetsim Logs:**
+
+  ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/5696b243-c0e2-41fa-83f8-a51846375ae4)
+  
+  > No SMTP server was configured.
