@@ -1,12 +1,12 @@
 ## Blue Team Labs Online (BTLO)
 
-# Digital Forensics
+### Digital Forensics
 - <a href="https://github.com/mmhgwyjs/btlo/blob/main/meta.md">Meta</a>
 
-# Incident Response
+### Incident Response
 
-# Reverse Engineering
+### Reverse Engineering
 
-# Security Operations
+### Security Operations
 
-# Threat Intelligence
+### Threat Intelligence
