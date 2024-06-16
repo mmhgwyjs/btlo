@@ -71,9 +71,8 @@
 
 - It will be under %temp%.
 
-  ![Screenshot 2024-06-16 011446](https://github.com/mmhgwyjs/btlo/assets/159692853/471d14a6-1ab9-4f7f-bd28-6c8aeec78900)
+  ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/f6168103-19f7-4292-96e3-c9c92db49b9b)
 
-   
    **Answer: `temp`**
 
 ---
