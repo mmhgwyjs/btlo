@@ -1,19 +1,43 @@
-## <a href="https://">Title</a>
+# <a href="url">Title</a>
 
-Platform:
+**Platform:** Blue Team Labs Online (BTLO)
 
-Scenario: 
+**Scenario:** 
 
-Category: 
+**Category:** 
 
-Type: 
+**Type:** 
 
-Difficulty: 
+**Difficulty:** 
 
-Tags: Exiftool, Reverse Image Search
+**File:** 
 
-File: 
+**Note:** For this walkthrough, I have created an isolated virtual machine to analyze the provided file. If you do not have it yet, you can follow this [malware analysis lab](https://github.com/mmhgwyjs/malware-analysis-lab/blob/main/README.md) guide for your setup. 
 
-Tool: 
+**Tools:** 
 
-Questions and Answers:
+---
+
+## **Questions and Answers:**
+
+***1. What is the question number one?***
+- Use this to explain:
+  `good for commandlets`
+
+  > comments
+
+  **Answer: `answer1`**
+
+---
+
+## **Additional Analysis/Artifacts**
+
+### Static Analysis
+
+**VirusTotal:** 
+
+### Dynamic Analysis
+
+***1. sample testing.***
+
+
