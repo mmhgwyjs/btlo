@@ -10,11 +10,11 @@
 
 **Difficulty:** Easy
 
-**File:** HDWallpaperEngine.txt
+**File:** `HDWallpaperEngine.txt`
 
-**Note:** For this walkthrough, I have created an isolated virtual machine to analyze the provided file. If you do not have it yet, you can follow this [malware analysis lab](https://github.com/mmhgwyjs/malware-analysis-lab/blob/main/README.md) guide for your setup. 
+**Tools:** `Text Editor (Notepad++)` `PowerShell`
 
-**Tools:** Text Editor (Notepad++), PowerShell
+**Note:** For this walkthrough, I have created an isolated virtual machine to analyze the provided file. If you have not set it up yet, I highly suggest following this [malware analysis lab](https://github.com/mmhgwyjs/malware-analysis-lab/blob/main/README.md) guide for your setup. 
 
 ---
 
