@@ -70,6 +70,6 @@
 
 - uploaded_2.png: [fdf27c77586f44952890621ea8ba508125219c9bf5e6d4f0c86430eb515e81d8](https://www.virustotal.com/gui/file/fdf27c77586f44952890621ea8ba508125219c9bf5e6d4f0c86430eb515e81d8/details)
 
-> To obtain the hash values using CMD, type the command `certutil -hashfile filename hashalgo`.
+> To obtain the hash values using CMD, use the command `certutil -hashfile filename hashalgo`.
 >
 > ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/73e2fa03-84ca-47f9-b86c-513df82de467)
