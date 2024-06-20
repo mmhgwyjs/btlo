@@ -93,10 +93,32 @@
 
 ## **Additional Analysis/Artifacts**
 
-### Static Analysis
+### Wireshark `insider.pcap`
 
-**VirusTotal:** 
+> [Wireshark cheat sheet](https://www.comparitech.com/net-admin/wireshark-cheat-sheet/)
 
-### Dynamic Analysis
+- Capture File Properties
 
-***1. sample testing.***
+  ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/fd8733e3-2f84-495c-a784-bce50ed1754f)
+
+  > Obtaining the timeframe of the packet capture is important and can be used to cross-reference the event you are investigating.
+
+- Protocol Hierarchy
+
+  ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/62cef36e-de20-49cd-a5be-4e2bec17d8e2)
+
+  > It lists all the protocols used within the packet capture.
+
+- Conversations
+
+  ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/c94a4876-1375-4e4c-a2d4-e008c08d04ab)
+
+  > All communications established can be seen here. The bytes column is essential for observing how much traffic is generated between two endpoints.
+  
+- Export Object
+
+  ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/0b023511-349c-4350-9211-a0b3342cb4a2)
+
+  > Any files uploaded or downloaded within the packet capture timeframe will be available here for investigation and can be downloaded.
+
+
