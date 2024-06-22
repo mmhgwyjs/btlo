@@ -6,6 +6,7 @@ Blue Team Labs Online (BTLO) is an interactive skills assessment platform design
 
 ## Digital Forensics
 - <a href="https://github.com/mmhgwyjs/btlo/blob/main/Meta.md">Meta</a>
+- <a href="https://github.com/mmhgwyjs/btlo/blob/main/Shiba%20Insider.md">Shiba Insider</a>
 
 ## Incident Response
 
