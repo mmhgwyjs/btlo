@@ -12,12 +12,15 @@
 
 **Files:** `insider.pcap` `README.txt` `ssdog1.jpeg`
 
-**Tools:** `Wireshark` `Exiftool`
+**Tools:** `Wireshark` `Exiftool` `CyberChef` `Steghide`
 
 > [Wireshark](https://www.wireshark.org/) is the world's foremost network protocol analyzer. It lets you see what's happening on your network at a microscopic level.
 > 
 > [ExifTool](https://exiftool.org/) is a platform-independent Perl library plus a command-line application for reading, writing and editing meta information in a wide variety of files.
 >
+> [CyberChef](https://cyberchef.org/) is a simple, intuitive web app for analysing and decoding data without having to deal with complex tools or programming languages.
+>
+> [Steghide](https://steghide.sourceforge.net/) is a steganography program that is able to hide data in various kinds of image- and audio-files.
 
 **Note:** For this walkthrough, I have created an isolated virtual machine to analyze the provided file. If you have not set it up yet, I highly suggest following this [malware analysis lab](https://github.com/mmhgwyjs/malware-analysis-lab/blob/main/README.md) guide for your setup. 
 
@@ -26,68 +29,88 @@
 ## **Questions and Answers:**
 
 ***1. What is the response message obtained from the PCAP file?***
-- Use this to explain:
-  `good for commandlets`
 
-  > comments
+- Notice the arrows under the `No.` column. They indicate a request and a response. An arrow pointing to the right signifies a request, while one pointing to the left signifies a response. More details can be found [here](https://www.wireshark.org/docs/wsug_html/#ChUsePacketListPaneSection).
 
-  **Answer: `answer1`**
+  ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/79aedd48-966b-4f7c-91f0-48e19bca4980)
+
+  > To check the contents of a packet, we have a couple of options. We can `right-click` and choose `Follow HTTP Stream` (blue box), or use the `Packet Details` pane (yellow box).
+  
+  **Answer: `use your own password`**
 
 ***2. What is the password of the ZIP file?***
-- Use this to explain:
-  `good for commandlets`
 
-  > comments
+- Using the same HTTP stream, we can see the `Authorization` header and it uses `Basic authentication`.
+  
+  ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/ae8bb593-6327-403a-bec3-ff53a014cb4a)
 
-  **Answer: `answer1`**
+  > For `Basic authentication`, the credentials are constructed by first combining the username and the password with a colon (username:password), and then by encoding the resulting string in base64.
+
+- We can use the tool called `CyberChef` to decode the base64-encoded string.
+
+  ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/98998d56-4e0f-49aa-8bec-b4d09011bdc8)
+
+  **Answer: `redforever`**
 
 ***3. Will more passwords be required?***
-- Use this to explain:
-  `good for commandlets`
 
-  > comments
+- After extracting the file using the password we obtained, we can found a `README.txt` stating that no more passwords will be needed.
 
-  **Answer: `answer1`**
+  ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/540b2dae-66ea-46fb-b942-22f6262bd2cc)
+
+  **Answer: `No`**
 
 ***4. What is the name of a widely-used tool that can be used to obtain file information?***
-- Use this to explain:
-  `good for commandlets`
 
-  > comments
+- [ExifTool](https://exiftool.org/) is a platform-independent Perl library plus a command-line application for reading, writing and editing meta information in a wide variety of files.
 
-  **Answer: `answer1`**
+  **Answer: `exiftool`**
 
 ***5. What is the name and value of the interesting information obtained from the image file metadata?***
-- Use this to explain:
-  `good for commandlets`
 
-  > comments
+- Using `exiftool`, we can get the metadata of the image.
 
-  **Answer: `answer1`**
+  ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/907b7954-90b6-4d75-8da4-a684b8c6cbd3)
+
+  > Open the command prompt, navigate to the directory where the file is located, and type the command  `exiftool` `filename`.
+
+  **Answer: `technique.steganography`**
+
+  > `Steganography` is the art of hiding secret data in plain sight. 
 
 ***6. Based on the answer from the previous question, what tool needs to be used to retrieve the information hidden in the file?***
-- Use this to explain:
-  `good for commandlets`
 
-  > comments
+- Using the same `exiftool` results.
 
-  **Answer: `answer1`**
+  ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/45fdda22-4ca6-490a-9860-9374853751e8)
+
+  **Answer: `steghide`**
+
+  > Steghide is a steganography program that is able to hide data in various kinds of image- and audio-files.
 
 ***7. Enter the ID retrieved.***
-- Use this to explain:
-  `good for commandlets`
 
-  > comments
+- To use the steghide tool, input the command `steghide` `extract` `-sf` `filename`
 
-  **Answer: `answer1`**
+  > I copied the image file into the steghide directory before running the command.
+
+  ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/7458df55-ed3e-4077-9cdd-1e6dfb09e352)
+
+  > No passphrase is needed, just press `Enter`.
+
+- It will create a text file named `idInsider.txt`
+ 
+    ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/07270503-8ef2-4357-bcd5-a1e3b21aaa9f)
+
+  **Answer: `0726ba878ea47de571777a`**
 
 ***8. What is the profile name of the attacker?***
-- Use this to explain:
-  `good for commandlets`
 
-  > comments
+- This one is tricky. The ID we got from the previous question pertains to his BTLO account.
+  
+  ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/4add5594-b3d1-46bd-ac1c-172d15686f13)
 
-  **Answer: `answer1`**
+  **Answer: `bluetiger`**
   
 ---
 
