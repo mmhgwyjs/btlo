@@ -10,6 +10,7 @@ Blue Team Labs Online (BTLO) is an interactive skills assessment platform design
 - <a href="https://github.com/mmhgwyjs/btlo/blob/main/Spectrum.md">Spectrum</a>
 
 ## Incident Response
+- <a href="https://github.com/mmhgwyjs/btlo/blob/main/Follina.md">Follina</a>
 
 ## Reverse Engineering
 - <a href="https://github.com/mmhgwyjs/btlo/blob/main/PowerShell%20Analysis%20-%20Keylogger.md">PowerShell Analysis - Keylogger</a>
