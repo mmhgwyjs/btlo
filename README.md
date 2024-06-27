@@ -3,6 +3,7 @@
 Blue Team Labs Online (BTLO) is an interactive skills assessment platform designed specifically for aspiring cybersecurity enthusiasts/professionals. It includes simulated scenarios for practicing Threat Intelligence, Incident Response, Threat Hunting, OSINT, Security Operations, Reverse Engineering, Digital Forensics, and more. 
 
 ---
+## CTF-Like
 
 ## Digital Forensics
 - <a href="https://github.com/mmhgwyjs/btlo/blob/main/Digital%20Forensics/Meta.md">Meta</a>
@@ -19,3 +20,4 @@ Blue Team Labs Online (BTLO) is an interactive skills assessment platform design
 - <a href="https://github.com/mmhgwyjs/btlo/blob/main/Security%20Operations/The%20Report.md">The Report</a>
 
 ## Threat Intelligence
+- <a href="https://github.com/mmhgwyjs/btlo/blob/main/Threat%20Intelligence/The%20Package.md">The Package</a>
