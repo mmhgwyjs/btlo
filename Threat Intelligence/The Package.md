@@ -36,7 +36,7 @@
 
   **Answer: `github`**
 
-> I got stuck here and didn't know what to do anymore. Then, I decided to look for the Discord channel of BTLO and discovered that this challenge is unsolvable because the original repository has been deleted.
+> For questions number 3-5, I got stuck and didn't know what to do next. Then, I decided to look for the Discord channel of BTLO and discovered that this challenge is unsolvable because the original repository has been deleted.
 
 > If you still want to complete this challenge, I found a write-up with the answers. You can check it [here](https://medium.com/@desuharshith/the-package-blue-team-labs-25178daae7ae).
   
