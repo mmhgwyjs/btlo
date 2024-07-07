@@ -13,11 +13,15 @@ Here is the ticket:
 
 **Difficulty:** Easy
 
-**File:** `file`
+**File:** `N/A`
 
-**Tools:** `Cyberchef`
+**Tools:** `Cyberchef` `Hashcat`
 
-**Note:** For this walkthrough, I have created an isolated virtual machine to analyze the provided file. If you have not set it up yet, I highly suggest following this [malware analysis lab](https://github.com/mmhgwyjs/malware-analysis-lab/blob/main/README.md) guide for your setup. 
+> [CyberChef](https://cyberchef.org/) is a simple, intuitive web app for analysing and decoding data without having to deal with complex tools or programming languages.
+> 
+> [Hashcat](https://github.com/hashcat/hashcat) is the world's fastest and most advanced password recovery utility, supporting five unique modes of attack for over 300 highly-optimized hashing algorithms.
+
+**Note:** For this walkthrough, I have spun up a Kali Linux virtual machine to utilize its tools. If you haven't set it up yet, I highly suggest following this [pentest lab](https://github.com/mmhgwyjs/pentest-lab) guide for your setup.
 
 ---
 
@@ -51,30 +55,48 @@ Here is the ticket:
 
   **Answer: `_4_Eyes`**
 
-***4. What is the Secret? (Format: String) ***
+***4. What is the Secret? (Format: String)***
 
-- Use this to explain:
-  `good for commandlets`
+- We will be using a tool called `hashcat`. Since we do not know the length of the secret, we will proceed with trial and error until we crack the password.
 
-  > comments
+  ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/915f6f7e-9b4e-4294-9a80-33b3aab59ac9)
 
-  **Answer: `answer1`**
+  > If we see 'Exhausted' as the result, it means we need to try a different method to crack the password.
 
+  > More information about the tool can be found by using this command `man hashcat`. This will display the manual for the tool.
+
+- Using the command `hashcat secret.txt -a 3 ?a?a?a?a`
+  
+  > `secret.txt` - This file contains the token that we will crack.
+  >
+  > `-a 3` - Attack mode - Brute force.
+  > 
+  > ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/bf83f068-3198-4ff7-8738-7dcc5d72fcc6)
+  >
+  > `?a?a?a?a` - Built-in Charsets. Each `?a` corresponds to one character, so overall we are trying to crack a 4-character password.
+  > 
+  > ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/fbc176f0-6a54-4bbb-ab4a-48a83e0dde60)
+  
+  ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/5031fdeb-b0a4-4252-be9f-3cffc526f294)
+
+  > This consumes memory, so make sure you have a spare. I use 8GB of RAM.
+  
+  **Answer: `bT!0`**
+  
 ***5. Can you generate a new verified signature ticket with a low privilege? (Format: String.String.String)***
 
-- Use this to explain:
-  `good for commandlets`
+- We will use `JWT.io` to generate a new token.
 
-  > comments
+  > This can also be used to decode the token instead of using `CyberChef`.
+  
+  ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/3427508d-ece4-4a65-8364-65e0c3e31590)
 
-  **Answer: `answer1`**
+  > Change the admin to false and input the secret we cracked earlier.
+
+  **Answer: `eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmbGFnIjoiQlRMe180X0V5ZXN9IiwiaWF0Ijo5MDAwMDAwMCwibmFtZSI6IkdyZWF0RXhwIiwiYWRtaW4iOmZhbHNlfQ.nMXNFvttCvtDcpswOQA8u_LpURwv6ZrCJ-ftIXegtX4`**
   
 ---
 
 ## **Additional Analysis/Artifacts**
 
-- We can also use `JWT.io` to decode the token.
-
-  ![image](https://github.com/mmhgwyjs/btlo/assets/159692853/01c6fee7-b2c1-44a8-a23e-5cb053b0cbd8)
-
-  > https://jwt.io/introduction/
+N/A
