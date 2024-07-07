@@ -4,6 +4,7 @@ Blue Team Labs Online (BTLO) is an interactive skills assessment platform design
 
 ---
 ## CTF-Like
+- <a href="https://github.com/mmhgwyjs/btlo/blob/main/CTF-Like/D3FEND.md">D3FEND</a>
 - <a href="https://github.com/mmhgwyjs/btlo/blob/main/CTF-Like/Log%20Analysis%20-%20Privilege%20Escalation.md">Log Analysis - Privilege Escalation</a>
 
 ## Digital Forensics
@@ -19,6 +20,7 @@ Blue Team Labs Online (BTLO) is an interactive skills assessment platform design
 - <a href="https://github.com/mmhgwyjs/btlo/blob/main/Reverse%20Engineering/PowerShell%20Analysis%20-%20Keylogger.md">PowerShell Analysis - Keylogger</a>
 
 ## Security Operations
+- <a href="https://github.com/mmhgwyjs/btlo/blob/main/Security%20Operations/Phishing%20Analysis.md">Phishing Analysis</a>
 - <a href="https://github.com/mmhgwyjs/btlo/blob/main/Security%20Operations/The%20Report.md">The Report</a>
 
 ## Threat Intelligence
