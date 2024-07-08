@@ -13,7 +13,7 @@ Note: If there are multiple answers, answer them alphabetically.
 
 **File:** `N/A`
 
-**Tools:** `D3FEND`
+**Tools:** `MITRE D3FEND`
 
 > [D3FEND](https://d3fend.mitre.org/) is a knowledge base, but more specifically a knowledge graph, of cybersecurity countermeasure techniques.
 
