@@ -10,7 +10,7 @@
 
 **Difficulty:** Easy
 
-**File:** `A Hope to CoCanDa.eml` `PuzzleToCoCanDa.pdf`
+**Files:** `A Hope to CoCanDa.eml` `PuzzleToCoCanDa.pdf`
 
 **Tools:** `Text Editor` `Mail Client` `Exiftool` `CyberChef`
 
