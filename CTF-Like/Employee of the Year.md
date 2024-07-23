@@ -10,7 +10,7 @@
 
 **Difficulty:** Easy
 
-**File:** `file`
+**File:** `recoverfiles.dd`
 
 **Tools:** `Photorec` `Exiftool` `CyberChef` `TestDisk`
 
