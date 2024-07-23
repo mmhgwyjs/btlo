@@ -31,7 +31,7 @@
 
 To answer the provided questions, we need to complete several necessary steps. For this challenge, we will use Kali Linux. If you have not set it up yet, you can refer to the instructions [here](https://github.com/mmhgwyjs/pentest-lab/blob/main/README.md).
 
-- Since the given file is an disk image file `.dd`, we will use `photorec` to analyze the disk image. We chose `photorec` because it is included in the tags for this challenge, although there are other tools available for analyzing disk images.
+- Since the given file is a disk image file `.dd`, we will use `photorec` to analyze the disk image. We chose `photorec` because it is included in the tags for this challenge, although there are other tools available for analyzing disk images.
 
 - Use the command `photorec image.dd`. 
 
